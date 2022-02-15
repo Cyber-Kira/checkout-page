@@ -1,8 +1,18 @@
-@mixin font($size, $height: $size, $weight: 400, $style: normal) {
+@mixin font($size, $height: $size, $weight: 600, $style: normal, $spacing: 0) {
   font-style: $style;
   font-weight: $weight;
   font-size: $size;
   line-height: $height;
+  letter-spacing: $spacing;
+}
+
+@mixin columns($width) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > * {
+    flex-basis: $width;
+  }
 }
 
 @mixin media-laptop {
