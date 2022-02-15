@@ -5,3 +5,93 @@ body {
   font-family: "Montserrat", sans-serif;
   color: $color-dark;
 }
+
+h1 {
+  @include font($size: 1.5rem, $height: 1.8125rem);
+  @include media-laptop {
+    @include font($size: 36px, $height: 44px);
+  }
+}
+
+.cart-item {
+  &__title {
+    @include font($size: 12px, $height: 15px);
+  }
+  &__price {
+    @include font($size: 14px, $height: 17px);
+    &_old {
+      @include font($size: 10px, $height: 12px);
+    }
+  }
+  @include media-laptop {
+    &__title {
+      @include font($size: 16px, $height: 20px);
+    }
+    &__price {
+      @include font($size: 16px, $height: 20px);
+      &_old {
+        @include font($size: 12px, $height: 15px);
+      }
+    }
+  }
+}
+
+.total {
+  &__title,
+  &__price {
+    @include font($size: 14px, $height: 17px);
+  }
+  @include media-laptop {
+    &__title,
+    &__price {
+      @include font($size: 18px, $height: 22px);
+    }
+  }
+}
+
+.counter {
+  @include font($size: 16px, $height: 20px);
+}
+
+.form {
+  &__label {
+    @include font($size: 14px, $height: 17px);
+  }
+  &__input {
+    @include font($size: 12px, $height: 20px);
+  }
+  @include media-laptop {
+    &__label {
+      @include font($size: 18px, $height: 22px);
+    }
+    &__input {
+      @include font($size: 16px, $height: 20px);
+    }
+  }
+}
+
+.form-label {
+  &__title {
+    @include font($size: 10px, $height: 12px);
+  }
+  &__input::placeholder {
+    @include font($size: 12px, $height: 15px);
+  }
+  @include media-laptop {
+    &__title {
+      @include font($size: 12px, $height: 15px);
+    }
+    &__input::placeholder {
+      @include font($size: 16px, $height: 20px);
+    }
+  }
+}
+
+.form-checkbox {
+  &__label {
+    @include font($size: 10px, $height: 12px);
+  }
+  @include media-laptop {
+    @include font($size: 12px, $height: 15px);
+  }
+}
