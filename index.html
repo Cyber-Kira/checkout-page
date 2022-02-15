@@ -10,12 +10,183 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="src/sass/style.css" />
     <title>Checkout Page</title>
   </head>
   <body>
-    <main></main>
-    <footer></footer>
-    <script src="src/js/index.js"></script>
+    <main class="main">
+      <h1 class="main__header">Checkout</h1>
+      <form class="form" action="#" method="post">
+        <section class="cart">
+          <div class="wrapper">
+            <div class="cart-item">
+              <img
+                src="src/img/photo1.png"
+                alt="Dark brown backpack"
+                class="cart-item__image"
+              />
+              <h2 class="cart-item__title">Vintage Backbag</h2>
+              <div class="cart-item__price">
+                <span class="cart-item__price">$54.99</span>
+                <span class="cart-item__price_old">$94.99</span>
+              </div>
+              <div class="counter">
+                <div class="counter__button_increment">
+                  <span class="material-icons-round"> add </span>
+                </div>
+                <div class="counter__count">
+                  <input
+                    type="number"
+                    name="amount"
+                    id="amountId"
+                    min="1"
+                    value="1"
+                  />
+                  <div class="counter__value">1</div>
+                </div>
+                <div class="counter__button_decrement">
+                  <span class="material-icons-round"> remove </span>
+                </div>
+              </div>
+            </div>
+            <div class="cart-item">
+              <img
+                src="src/img/photo2.png"
+                alt="Dark brown backpack"
+                class="cart-item__image"
+              />
+              <h2 class="cart-item__title">Levi Shoes</h2>
+              <div class="cart-item__price">
+                <span class="cart-item__price">$74.99</span>
+                <span class="cart-item__price_old">$124.99</span>
+              </div>
+              <div class="counter">
+                <div class="counter__button_increment">
+                  <span class="material-icons-round"> add </span>
+                </div>
+                <div class="counter__count">
+                  <input
+                    type="number"
+                    name="amount"
+                    id="amountId"
+                    min="1"
+                    value="1"
+                  />
+                  <div class="counter__value">1</div>
+                </div>
+                <div class="counter__button_decrement">
+                  <span class="material-icons-round"> remove </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="total">
+            <div class="total-shipping total-item">
+              <span class="total__title">Shipping</span>
+              <span class="total__price">$19</span>
+            </div>
+            <div class="total-total total-item">
+              <span class="total__title">Total</span>
+              <span class="total__price">$148.98</span>
+            </div>
+          </div>
+        </section>
+        <section class="contact">
+          <h2 class="form__label">Contact infomation</h2>
+          <label class="form-label" for="email">
+            <p class="form-label__title">E-mail</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="email"
+              name="user_email"
+              placeholder="Enter your email..."
+            />
+          </label>
+          <label class="form-label" for="phone">
+            <p class="form-label__title">Phone</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="phone"
+              name="user_phone"
+              placeholder="Enter your phone..."
+            />
+          </label>
+        </section>
+        <section class="shipping">
+          <h2 class="form__label">Shipping address</h2>
+          <label class="form-label" for="name">
+            <p class="form-label__title">Full name</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="name"
+              name="user_name"
+              placeholder="Your name.."
+            />
+          </label>
+          <label class="form-label" for="address">
+            <p class="form-label__title">Address</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="address"
+              name="user_address"
+              placeholder="Your address.."
+            />
+          </label>
+          <label class="form-label" for="city">
+            <p class="form-label__title">City</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="city"
+              name="user_city"
+              placeholder="Your city.."
+            />
+          </label>
+          <label class="form-label" for="country">
+            <p class="form-label__title">Country</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="country"
+              name="user_country"
+              placeholder="Your country.."
+            />
+          </label>
+          <label class="form-label" for="code">
+            <p class="form-label__title">Postal code</p>
+            <input
+              class="form-label__input"
+              type="text"
+              id="code"
+              name="user_code"
+              placeholder="Your postal code.."
+            />
+          </label>
+        </section>
+        <div class="form__checkbox">
+          <input type="checkbox" id="save" name="save" />
+          <label for="save">Save this information for next time</label>
+        </div>
+        <input type="submit" value="Continue" />
+      </form>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        created by
+        <a href="https://devchallenges.io/portfolio/Cyber-Kira" target="_blank"
+          ><span class="text_highlighted">CyberKira</span></a
+        >
+        - devChallenges.io
+      </p>
+    </footer>
+    <script src="dist/main.js"></script>
   </body>
 </html>
