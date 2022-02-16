@@ -1,0 +1,15 @@
+.form {
+  &__label {
+    padding-bottom: 11px;
+  }
+  @include media-laptop {
+    @include columns(48%);
+    &__label {
+      padding-bottom: 14px;
+    }
+  }
+}
+
+.form-button-wrapper {
+  display: flex;
+}

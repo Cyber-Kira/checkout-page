@@ -1,0 +1,6 @@
+.contact {
+  padding: 39px 0 28.5px;
+  @include media-laptop {
+    padding: 0 0 58px;
+  }
+}

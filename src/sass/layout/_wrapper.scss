@@ -2,4 +2,17 @@
   max-width: $content-width;
   margin: auto;
   padding: 0 12px;
+
+  @include media-tablet {
+    max-width: $tablet-width;
+  }
+  @include media-laptop {
+    padding: 0;
+    margin: 0 auto;
+    max-width: $content-width;
+  }
+}
+
+.location-wrapper {
+  @include columns(46.5%);
 }
