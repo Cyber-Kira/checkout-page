@@ -1,3 +1,10 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+.button {
+  color: $color-white;
+  border: none;
+  padding: 17px 45px;
+  background: #f2994a;
+  border-radius: 12px;
+  cursor: pointer;
+
+  margin-left: auto;
+}
