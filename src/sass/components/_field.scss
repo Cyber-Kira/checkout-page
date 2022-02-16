@@ -1,0 +1,83 @@
+.form-label {
+  position: relative;
+  display: block;
+  margin-bottom: 16.5px;
+  &__title {
+    padding-bottom: 5px;
+  }
+  &__input {
+    width: 100%;
+    height: 40px;
+    text-indent: 34px;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    border: 1px solid $color-lightest;
+    border-radius: 12px;
+
+    color: $color-light;
+  }
+  > span {
+    position: absolute;
+    bottom: calc(50% - 17.5px);
+    left: 11.75px;
+
+    color: $color-lightest;
+  }
+
+  @include media-laptop {
+    &__title {
+      padding-bottom: 7px;
+    }
+    &__input {
+      height: 56px;
+      text-indent: 52px;
+    }
+    > span {
+      position: absolute;
+      bottom: calc(50% - 21.5px);
+      left: 14px;
+
+      color: $color-lightest;
+    }
+  }
+}
+
+.select {
+  position: relative;
+  &__select {
+    appearance: none;
+    background-color: transparent;
+    option {
+      background: $color-white;
+      text-indent: 20px;
+    }
+    transition: all 0.2s;
+  }
+  &::after {
+    content: "";
+    display: block;
+    background: url("../img/expand_more_black_18dp.svg") no-repeat;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: 9px;
+    bottom: calc(50% - 9px);
+    border-radius: 4px;
+    background-color: $color-background-dark;
+    transition: all 0.2s;
+  }
+}
+
+.select.open {
+  .select__select {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: 1px solid transparent;
+  }
+  &::after {
+    transform: rotate(180deg);
+  }
+}
