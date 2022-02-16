@@ -22,8 +22,8 @@
       <div class="wrapper">
         <h1 class="main__header">Checkout</h1>
       </div>
-      <form class="form" action="#" method="post">
-        <div class="wrapper">
+      <form class="form wrapper" action="#" method="post">
+        <div class="cart-wrapper">
           <section class="cart">
             <div class="cart__items">
               <div class="cart-item">
@@ -38,7 +38,7 @@
                   </div>
                   <div class="counter">
                     <div class="counter__button counter__button_increment">
-                      <span class="material-icons-round"> add </span>
+                      <span class="material-icons-round"> remove </span>
                     </div>
                     <div class="counter__count">
                       <input
@@ -51,7 +51,7 @@
                       />
                     </div>
                     <div class="counter__button counter__button_decrement">
-                      <span class="material-icons-round"> remove </span>
+                      <span class="material-icons-round"> add </span>
                     </div>
                   </div>
                 </div>
@@ -68,7 +68,7 @@
                   </div>
                   <div class="counter">
                     <div class="counter__button IIcounter__button_increment">
-                      <span class="material-icons-round"> add </span>
+                      <span class="material-icons-round"> remove </span>
                     </div>
                     <div class="counter__count">
                       <input
@@ -81,7 +81,7 @@
                       />
                     </div>
                     <div class="counter__button IIcounter__button_decrement">
-                      <span class="material-icons-round"> remove </span>
+                      <span class="material-icons-round"> add </span>
                     </div>
                   </div>
                 </div>
@@ -99,101 +99,121 @@
             </div>
           </section>
         </div>
-        <div class="wrapper">
-          <section class="contact">
-            <h2 class="form__label">Contact infomation</h2>
-            <label class="form-label" for="email">
-              <p class="form-label__title">E-mail</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="email"
-                name="user_email"
-                placeholder="Enter your email..."
-              />
-            </label>
-            <label class="form-label" for="phone">
-              <p class="form-label__title">Phone</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="phone"
-                name="user_phone"
-                placeholder="Enter your phone..."
-              />
-            </label>
-          </section>
-        </div>
-        <div class="wrapper">
-          <section class="shipping">
-            <h2 class="form__label">Shipping address</h2>
-            <label class="form-label" for="name">
-              <p class="form-label__title">Full name</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="name"
-                name="user_name"
-                placeholder="Your name.."
-              />
-            </label>
-            <label class="form-label" for="address">
-              <p class="form-label__title">Address</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="address"
-                name="user_address"
-                placeholder="Your address.."
-              />
-            </label>
-            <label class="form-label" for="city">
-              <p class="form-label__title">City</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="city"
-                name="user_city"
-                placeholder="Your city.."
-              />
-            </label>
-            <label class="form-label" for="country">
-              <p class="form-label__title">Country</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="country"
-                name="user_country"
-                placeholder="Your country.."
-              />
-            </label>
-            <label class="form-label" for="code">
-              <p class="form-label__title">Postal code</p>
-              <input
-                class="form-label__input"
-                type="text"
-                id="code"
-                name="user_code"
-                placeholder="Your postal code.."
-              />
-            </label>
-          </section>
-        </div>
-        <div class="wrapper">
-          <div class="form-checkbox">
-            <input
-              class="form-checkbox__input"
-              type="checkbox"
-              id="save"
-              name="save"
-            />
-            <label class="form-checkbox__label" for="save"
-              >Save this information for next time</label
-            >
+        <div class="form-wrapper">
+          <div class="wrapper">
+            <section class="contact">
+              <h2 class="form__label">Contact infomation</h2>
+              <label class="form-label" for="email">
+                <p class="form-label__title">E-mail</p>
+                <span class="material-icons-round md-18"> email </span>
+                <input
+                  class="form-label__input"
+                  type="text"
+                  id="email"
+                  name="user_email"
+                  placeholder="Enter your email..."
+                />
+              </label>
+              <label class="form-label" for="phone">
+                <p class="form-label__title">Phone</p>
+                <span class="material-icons-round md-18"> phone </span>
+                <input
+                  class="form-label__input"
+                  type="text"
+                  id="phone"
+                  name="user_phone"
+                  placeholder="Enter your phone..."
+                />
+              </label>
+            </section>
           </div>
-        </div>
-        <div class="wrapper">
-          <input class="form__input" type="submit" value="Continue" />
+          <div class="wrapper">
+            <section class="shipping">
+              <h2 class="form__label">Shipping address</h2>
+              <label class="form-label" for="name">
+                <p class="form-label__title">Full name</p>
+                <span class="material-icons-round md-18"> account_circle </span>
+                <input
+                  class="form-label__input"
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Your name.."
+                />
+              </label>
+              <label class="form-label" for="address">
+                <p class="form-label__title">Address</p>
+                <span class="material-icons-round md-18"> home </span>
+                <input
+                  class="form-label__input"
+                  type="text"
+                  id="address"
+                  name="user_address"
+                  placeholder="Your address.."
+                />
+              </label>
+              <label class="form-label" for="city">
+                <p class="form-label__title">City</p>
+                <span class="material-icons-round md-18"> location_city </span>
+                <input
+                  class="form-label__input"
+                  type="text"
+                  id="city"
+                  name="user_city"
+                  placeholder="Your city.."
+                />
+              </label>
+              <div class="location-wrapper">
+                <label class="form-label" for="country">
+                  <p class="form-label__title">Country</p>
+                  <span class="material-icons-round md-18">
+                    location_city
+                  </span>
+                  <div class="select">
+                    <select
+                      class="form-label__input select__select"
+                      name="countries"
+                      id="country-select"
+                    >
+                      <option value="">Your country..</option>
+                      <option value="usa">USA</option>
+                      <option value="canada">Canada</option>
+                      <option value="russia">Russia</option>
+                    </select>
+                  </div>
+                </label>
+                <label class="form-label" for="code">
+                  <p class="form-label__title">Postal code</p>
+                  <span class="material-icons-round md-18">
+                    markunread_mailbox
+                  </span>
+                  <input
+                    class="form-label__input"
+                    type="text"
+                    id="code"
+                    name="user_code"
+                    placeholder="Your postal code.."
+                  />
+                </label>
+              </div>
+            </section>
+          </div>
+          <div class="wrapper">
+            <div class="form-checkbox">
+              <input
+                class="form-checkbox__input"
+                type="checkbox"
+                id="save"
+                name="save"
+              />
+              <label class="form-checkbox__label" for="save"
+                >Save this information for next time</label
+              >
+            </div>
+          </div>
+          <div class="wrapper form-button-wrapper">
+            <input class="button" type="submit" value="Continue" />
+          </div>
         </div>
       </form>
     </main>
