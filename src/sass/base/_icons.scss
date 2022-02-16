@@ -1,6 +1,9 @@
 /* Rules for sizing the icon. */
 .material-icons-round.md-18 {
   font-size: 18px;
+  @include media-laptop {
+    font-size: 24px;
+  }
 }
 .material-icons-round.md-24 {
   font-size: 24px;

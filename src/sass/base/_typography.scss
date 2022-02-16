@@ -74,6 +74,7 @@ h1 {
   &__title {
     @include font($size: 10px, $height: 12px);
   }
+  &__input,
   &__input::placeholder {
     @include font($size: 12px, $height: 15px);
   }
@@ -81,6 +82,7 @@ h1 {
     &__title {
       @include font($size: 12px, $height: 15px);
     }
+    &__input,
     &__input::placeholder {
       @include font($size: 16px, $height: 20px);
     }
@@ -92,6 +94,15 @@ h1 {
     @include font($size: 10px, $height: 12px);
   }
   @include media-laptop {
-    @include font($size: 12px, $height: 15px);
+    &__label {
+      @include font($size: 12px, $height: 15px);
+    }
+  }
+}
+
+.footer {
+  @include font($size: 14px, $height: 17px);
+  a {
+    font-weight: 700;
   }
 }
