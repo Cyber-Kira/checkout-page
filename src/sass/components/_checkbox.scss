@@ -1,0 +1,22 @@
+.form-checkbox {
+  padding: 17px 0 21px;
+  display: flex;
+  align-items: center;
+  &__input {
+    margin-right: 8px;
+
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    border: 1px solid $color-lightest;
+    border-radius: 4px;
+
+    &:checked {
+      background-color: $color-accent;
+    }
+  }
+  &__label {
+    width: 100%;
+  }
+}
