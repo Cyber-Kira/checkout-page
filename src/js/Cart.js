@@ -64,6 +64,10 @@ const calculatePrice = (data) => {
     price += item.salePrice * item.total;
   }
 
+  if (price > 0) {
+    return price + state.shippingPrice;
+  }
+
   return price;
 };
 
