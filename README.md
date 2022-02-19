@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://github.com/Cyber-Kira/checkout-page">
+    <a href="https://cyber-kira.github.io/checkout-page/">
       Demo
     </a>
     <span> | </span>
@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://i.ibb.co/4fg2Ndx/screencapture-cyber-kira-github-io-checkout-page-2022-02-19-17-51-07.png)
 
 ### Built With
 
