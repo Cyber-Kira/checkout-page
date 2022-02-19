@@ -19,4 +19,9 @@
   &__label {
     width: 100%;
   }
+  &:hover *,
+  &:focus * {
+    cursor: pointer;
+    user-select: none;
+  }
 }

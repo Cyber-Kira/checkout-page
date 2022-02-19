@@ -839,6 +839,9 @@ h1 {
   background: #ffffff;
   text-indent: 20px;
 }
+.select__select:hover, .select__select:focus {
+  cursor: pointer;
+}
 .select::after {
   content: "";
   display: block;
@@ -851,15 +854,6 @@ h1 {
   border-radius: 4px;
   background-color: #e0e0e0;
   transition: all 0.2s;
-}
-
-.select.open .select__select {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom: 1px solid transparent;
-}
-.select.open::after {
-  transform: rotate(180deg);
 }
 
 .form-checkbox {
@@ -880,6 +874,10 @@ h1 {
 }
 .form-checkbox__label {
   width: 100%;
+}
+.form-checkbox:hover *, .form-checkbox:focus * {
+  cursor: pointer;
+  user-select: none;
 }
 
 .message-wrapper {
