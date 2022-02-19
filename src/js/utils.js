@@ -1,57 +1,40 @@
-const errorMessage = () => {
-  const messageContainer = document.createElement("div");
-  const messageDescription = document.createElement("p");
+const removeMessage = (id) => {
+  document.querySelector(`[data-id="${id}"]`).remove();
+};
 
-  messageContainer.classList.add("error-message", "hidden");
-  messageDescription.innerHTML = "Invalid email or phone";
+const removeHidden = (id) => {
+  document.querySelector(`[data-id="${id}"]`).classList.remove("hidden");
+};
+
+const addFade = (id) => {
+  document.querySelector(`[data-id="${id}"]`).classList.add("fade-out");
+};
+
+const generateMessageDiv = (text, messageType) => {
+  const messageContainer = document.querySelector(".message-wrapper");
+  const messageDescription = document.createElement("div");
+
+  const id = Math.random().toString(16).slice(2);
+  messageDescription.dataset.id = id;
+
+  messageDescription.classList.add(
+    "message",
+    `message_${messageType}`,
+    "hidden"
+  );
+  messageDescription.innerHTML = text;
   messageContainer.append(messageDescription);
 
-  return messageContainer;
+  return messageDescription;
 };
 
-const successMessage = () => {
-  const messageContainer = document.createElement("div");
-  const messageDescription = document.createElement("p");
+export const showMessage = (message, messageType) => {
+  const main = document.querySelector(".message-wrapper");
+  const element = generateMessageDiv(message, messageType);
 
-  messageContainer.classList.add("success-message", "hidden");
-  messageDescription.innerHTML = "You successfully logged in!";
-  messageContainer.append(messageDescription);
+  main.append(element);
 
-  return messageContainer;
-};
-
-export const showWarning = () => {
-  const main = document.querySelector(".main");
-
-  main.append(errorMessage());
-
-  const errors = document.querySelectorAll(".error-message");
-  setTimeout(() => {
-    errors.forEach((error) => {
-      error.classList.remove("hidden");
-    });
-  }, 50);
-  setTimeout(() => {
-    errors.forEach((error) => {
-      error.remove();
-    });
-  }, 4500);
-};
-
-export const showSuccess = () => {
-  const main = document.querySelector(".main");
-
-  main.append(successMessage());
-
-  const succeses = document.querySelectorAll(".success-message");
-  setTimeout(() => {
-    succeses.forEach((success) => {
-      success.classList.remove("hidden");
-    });
-  }, 50);
-  setTimeout(() => {
-    succeses.forEach((success) => {
-      success.remove();
-    });
-  }, 4500);
+  setTimeout(() => removeHidden(element.dataset.id), 10);
+  setTimeout(() => addFade(element.dataset.id), 3500);
+  setTimeout(() => removeMessage(element.dataset.id), 3800);
 };
