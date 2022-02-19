@@ -882,4 +882,68 @@ h1 {
   width: 100%;
 }
 
+.error-message {
+  position: fixed;
+  top: 30px;
+  left: calc(50% - 157.5px);
+  display: flex;
+  justify-content: center;
+  width: 315px;
+  text-transform: uppercase;
+  background-color: #da6666;
+  border: 1px solid #bdbdbd;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  opacity: 1;
+  transition: opacity 1.2s ease-in-out;
+  transition: transform 0.85s ease;
+}
+
+.error-message.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.error-message.cross {
+  background-color: #9e4949;
+}
+
+.success-message {
+  position: fixed;
+  top: 30px;
+  left: calc(50% - 157.5px);
+  display: flex;
+  justify-content: center;
+  width: 315px;
+  text-transform: uppercase;
+  background-color: #74c369;
+  border: 1px solid #bdbdbd;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 10px 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  opacity: 1;
+  transition: opacity 1.2s ease-in-out;
+  transition: transform 0.85s ease;
+}
+
+.success-message.hidden {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.success-message.cross {
+  background-color: #4da441;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 import { renderCart } from "./js/Cart";
+import { addListeners } from "./js/Submit";
 
 const data = [
   {
@@ -24,4 +25,6 @@ window.onload = function () {
   const cartContainer = form.querySelector(".cart");
 
   renderCart(cartContainer, data);
+
+  addListeners();
 };
