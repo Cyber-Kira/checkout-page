@@ -11,12 +11,11 @@
   pointer-events: none;
   padding-top: 30px;
 
-  .error-message {
+  .message {
     width: 350px;
     max-width: 370px;
     text-align: center;
 
-    background-color: #ed6c02;
     border: 1px solid $color-line;
     color: $color-white;
 
@@ -32,10 +31,22 @@
 
     visibility: visible;
     transition: transform 0.5s ease, opacity 0.35s linear;
+
+    &_success {
+      background-color: #2e7d32;
+    }
+
+    &_error {
+      background-color: #d32f2f;
+    }
+
+    &_warning {
+      background-color: #ed6c02;
+    }
   }
 }
 
-.error-message.hidden {
+.message.hidden {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-10px);
